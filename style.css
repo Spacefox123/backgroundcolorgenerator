@@ -6,21 +6,36 @@
 */
 
 #gradient {
-  font: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+  /*grid grid-template-rows: 30rem 30rem 30rem;*/
+    font: 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
-    text-align: center;
+    /*text-align: center;*/
     text-transform: uppercase;
     letter-spacing: .5em;
-    top: 15%;
+    /*top: 15%;*/
     background: -webkit-gradient(linear, left top, right top, from(red) , to(yellow));
     background: -o-linear-gradient(left, red , yellow);
     background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+.colorpickers {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  height: 30vh;
 }
 
 .picker {
   border-width: 2px;
   width: 7rem;
   height: 7rem;
+  align-self: center;
+  justify-self: center;
 }
 
 #randomize {
@@ -33,6 +48,8 @@
 
 
 h1 {
+  grid-row: 1;
+  height: 20vh;
     font: 600 3.5em 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
@@ -41,7 +58,12 @@ h1 {
     width: 100%;
 }
 
+h2 {
+  grid-row: 3;
+}
+
 h3 {
+  grid-row: 4;
   font: 900 1em 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
@@ -49,3 +71,39 @@ h3 {
     letter-spacing: 0.01em;
 
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: .2em;
+  }
+
+  .picker {
+    border-width: 1px;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: .1em;
+  }
+} 
+
+@media only screen and (max-height: 600px) {
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: .2em;
+  }
+
+  .picker {
+    border-width: 1px;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: .1em;
+  }
+} 
