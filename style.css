@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 #gradient {
   font: 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
@@ -5,6 +12,8 @@
     text-transform: uppercase;
     letter-spacing: .5em;
     top: 15%;
+    background: -webkit-gradient(linear, left top, right top, from(red) , to(yellow));
+    background: -o-linear-gradient(left, red , yellow);
     background: linear-gradient(to right, red , yellow); /* Standard syntax */
 }
 
